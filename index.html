@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url("Pictures/background (1).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgb(44, 62, 80);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+            color: #ecf0f1;
+        }
+
+        .logo-name {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .btn-view-projects {
+            background-color: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view-projects:hover {
+            background-color: #34495e;
+            border-color: #34495e;
+        }
+
+        .projects-section {
+            display: none;
+            flex: 1;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 90%; /* Adjust the width of the card */
+            max-width: 350px; /* Set a maximum width for larger screens */
+            margin: 0 auto; /* Center the card */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-body h5 {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .card-body p {
+            color: #7f8c8d;
+        }
+
+        .btn-primary {
+            background-color: #2c3e50;
+            border-color: #2c3e50;
+        }
+
+        .btn-primary:hover {
+            background-color: #34495e;
+            border-color: #34495e;
+        }
+
+        footer {
+            background-color: rgb(44, 62, 80);
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #4048c0;
+        }
+
+        .navbar-toggler {
+            display: none;
+        }
+
+        .home-icon {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .home-icon a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .home-icon {
+                display: flex;
+            }
+
+            .navbar-collapse {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="Logo" href="#" id="logo-link">
+                    <img src="Pictures/logo.jpg" alt="Logo name" class="logo">
+                    <span class="logo-name">Eliz</span>
+                </a>
+                <button class="home-icon" id="home-icon" style="display: none;">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-home"></i> <span class="d-none d-sm-inline">Home</span>
+                    </a>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="body text-center" id="welcome-section">
+        <div class="container d-flex justify-content-center align-items-center flex-column" style="flex: 1;">
+            <h1>Welcome to My Homepage</h1>
+            <button class="btn btn-view-projects" id="view-projects-btn">View My Projects</button>
+        </div>
+    </main>
+
+    <section id="projects" class="py-5 projects-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h1 style="font-size: 2rem; font-weight: bold; color: #ffffff; border: 2px solid #2c3e50; background-color: #2c3e50;padding: 5px; border-radius: 5px; display: inline-block;">
+                        My Projects
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="Pictures/cat1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">A brief description.</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="Pictures/cat2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">A brief description.</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="Pictures/cat3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">A brief description.</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-primary">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <script>
+        const viewProjectsButton = document.getElementById('view-projects-btn');
+        const projectsSection = document.getElementById('projects');
+        const welcomeSection = document.getElementById('welcome-section');
+        const logoLink = document.getElementById('logo-link');
+        const homeIcon = document.getElementById('home-icon');
+
+        viewProjectsButton.addEventListener('click', function () {
+            projectsSection.style.display = 'block';
+            logoLink.style.display = 'none';
+            homeIcon.style.display = 'flex';
+            welcomeSection.style.display = 'none';
+            viewProjectsButton.style.display = 'none';
+        });
+
+        homeIcon.addEventListener('click', function () {
+            projectsSection.style.display = 'none';
+            logoLink.style.display = 'flex';
+            homeIcon.style.display = 'none';
+            welcomeSection.style.display = 'flex';
+            viewProjectsButton.style.display = 'block';
+        });
+
+        $('.navbar-toggler').on('click', function () {
+            if (homeIcon.style.display === 'flex') {
+                homeIcon.style.display = 'none';
+            }
+        });
+
+        homeIcon.style.display = 'none';  
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
